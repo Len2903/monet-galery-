@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monet Digital — La Galerie Immersive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .mobile-crop-monet img {
+      object-position: 50% 20% !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="accueil">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo-group reset-home-link">
+        <div class="logo-badge">
+          <svg viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="lotus-icon">
+            <path d="M32 6C32 6 24 18 24 28C24 34 28 38 32 40C36 38 40 34 40 28C40 18 32 6 32 6Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M24 26C19 20 11 18 11 18C11 18 12 29 20 34C24 36.5 28 38 32 40" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M40 26C45 20 53 18 53 18C53 18 52 29 44 34C40 36.5 36 38 32 40" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M17 31C11 31 6 34 6 34C6 34 12 40 22 40C26 40 29 40 32 40" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M47 31C53 31 58 34 58 34C58 34 52 40 42 40C38 40 35 40 32 40" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M22 17L25 11L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M42 17L39 11L36 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">MONET DIGITAL</span>
+          <span class="logo-subtitle">LA GALERIE IMMERSIVE</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-link active reset-home-link">Accueil</a>
+        <a href="#collection" class="nav-link" id="headerCollectionLink">La collection</a>
+        <a href="#histoire" class="nav-link reset-home-link-hist">L’histoire de Monet</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <a href="#favoris" class="nav-link nav-favorites" id="desktopFavoritesBtn">
+          <svg width="16" height="15" viewBox="0 0 24 22" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 20.5C12 20.5 2 14.2 2 7.2C2 4.1 4.4 1.8 7.3 1.8C9.2 1.8 11 2.8 12 4.4C13 2.8 14.8 1.8 16.7 1.8C19.6 1.8 22 4.1 22 7.2C22 14.2 12 20.5 12 20.5Z"/>
+          </svg>
+          Mes favoris (<span id="favCountDesktop">0</span>)
+        </a>
+      </nav>
+
+      <button class="mobile-menu-btn" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer">
+        MENU
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <nav class="mobile-nav-list">
+        <a href="#accueil" class="mobile-nav-link reset-home-link">Accueil</a>
+        <a href="#collection" class="mobile-nav-link" id="headerCollectionLinkMobile">La collection</a>
+        <a href="#epoques" class="mobile-nav-link reset-home-link-ep">Parcourir les époques</a>
+        <a href="#histoire" class="mobile-nav-link reset-home-link-hist">L’histoire de Monet</a>
+        <a href="#favoris" class="mobile-nav-link" id="mobileFavoritesBtn">Mes favoris (<span id="favCountMobile">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Le contenu principal qui bascule dynamiquement entre Accueil et Favoris -->
+  <main id="mainContent">
+
+    <!-- ================= HERO BANNER (NYMPHÉAS) ================= -->
+    <section class="hero-section clickable-artwork"
+             data-title="Les Nymphéas (Cycle monumental)"
+             data-year="1897-1926"
+             data-location="Musée de l'Orangerie, Paris"
+             data-img="images/Nympheas.jpg"
+             data-desc="Les Nymphéas constituent un ensemble d'environ 250 peintures à l'huile de Claude Monet. Ce cycle monumental représente son jardin d'eau à Giverny. Monet s'affranchit de la ligne d'horizon traditionnelle, plongeant le spectateur dans un monde aquatique infini où le ciel et l'eau se confondent sous le jeu changeant de la lumière."
+             data-id="hero-nympheas">
+      <div class="container hero-wrapper">
+        <div class="hero-card">
+          <img src="images/Nympheas.jpg" alt="Les Nymphéas de Claude Monet" class="hero-bg">
+          <div class="hero-overlay"></div>
+          
+          <div class="hero-content">
+            <span class="hero-eyebrow">Invitation</span>
+            <h1 class="hero-title">LES NYMPHÉAS</h1>
+            <p class="hero-mobile-desc">
+              Une collection immersive pour explorer les coups de pinceau, les lieux et les époques.
+            </p>
+            <a href="#collection" class="btn-cta">
+              <span>Explorer la collection</span>
+              <span class="arrow-desktop" aria-hidden="true">→</span>
+              <span class="arrow-mobile" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 1 : CHEFS-D'ŒUVRE ================= -->
+    <section class="section-block" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="mobile-eyebrow">CHEFS-D'ŒUVRE</span>
+            <h2 class="section-title">LES ŒUVRES À NE PAS RATER</h2>
+          </div>
+          <button class="link-all desktop-only btn-link-collection" id="showAllColDesktop">Toute la collection ↗</button>
+        </div>
+
+        <!-- Grille principale des 3 incontournables -->
+        <div class="cards-grid masterpieces-grid" id="mainMasterpiecesGrid">
+          
+          <article class="art-card masterpiece-card clickable-artwork" 
+                   data-title="Impression, soleil levant" data-year="1872" data-location="Musée Marmottan Monet, Paris" data-img="images/impression-soleil-levant.jpg"
+                   data-desc="Toile fondatrice du mouvement impressionniste, peinte depuis le port de Le Havre. Le traitement audacieux de la lumière et des fumées industrielles a inspiré le nom critique du mouvement par Louis Leroy."
+                   data-id="impr-1872">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/impression-soleil-levant.jpg" alt="Impression, soleil levant"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>IMPRESSION, SOLEIL LEVANT</h3>
+                <span class="year-badge">1872</span>
+              </div>
+              <div class="card-footer-row">
+                <p class="card-location">Musée Marmottan Monet, Paris</p>
+                <span class="card-action-link mobile-only">Voir l’œuvre ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-card masterpiece-card clickable-artwork" 
+                   data-title="La Gare de Saint Lazare" data-year="1877" data-location="Le Musée d'Orsay, Paris" data-img="images/la-gare-de-saint-lazare.jpg"
+                   data-desc="Monet loue un appartement près de la gare pour peindre cette série moderne. Il s'intéresse à la vapeur, au fer forgé, aux locomotives et à la fumée filtrée par la grande verrière."
+                   data-id="gare-1877">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/la-gare-de-saint-lazare.jpg" alt="La Gare de Saint Lazare"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>LA GARE DE SAINT LAZARE</h3>
+                <span class="year-badge">1877</span>
+              </div>
+              <div class="card-footer-row">
+                <p class="card-location">Le Musée d'Orsay, Paris</p>
+                <span class="card-action-link mobile-only">Voir l’œuvre ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="art-card masterpiece-card clickable-artwork" 
+                   data-title="La Promenade" data-year="1875" data-location="National Gallery of Art, Washington" data-img="images/la-promenade.jpg"
+                   data-desc="Représentant Camille (son épouse) et leur fils Jean sur une colline balayée par le vent, ce tableau capte la sensation fugace d'un instant en plein air avec des touches vibrantes."
+                   data-id="prom-1875">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/la-promenade.jpg" alt="La Promenade"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>LA PROMENADE</h3>
+                <span class="year-badge">1875</span>
+              </div>
+              <div class="card-footer-row">
+                <p class="card-location">National Gallery of Art, Washington</p>
+                <span class="card-action-link mobile-only">Voir l’œuvre ↗</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- EXTENSION : Les 10 tableaux complets avec informations riches -->
+        <div class="extended-collection-container" id="extendedCollection" style="display: none;">
+          <div class="extended-header-row">
+            <h3 class="extended-title">Catalogue Intégral : Les 10 Chefs-d'œuvre de Monet</h3>
+            <button class="close-extended-btn" id="closeExtendedCol">Fermer la collection ✕</button>
+          </div>
+          <div class="cards-grid">
+            
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Impression, soleil levant" data-year="1872" data-location="Musée Marmottan Monet, Paris" data-img="images/impression-soleil-levant.jpg" data-desc="Toile fondatrice du mouvement impressionniste au Havre. Peinte depuis une chambre d'hôtel avec vue sur le bassin de commerce, elle capture l'effet fugitif d'un soleil rouge perçant à travers les brumes portuaires et les fumées d'usines." data-id="col-1">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/impression-soleil-levant.jpg" alt="Impression, soleil levant"></div>
+              <div class="card-body"><div class="card-title-row"><h3>IMPRESSION, SOLEIL LEVANT</h3><span class="year-badge">1872</span></div><p class="card-location">Musée Marmottan, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="La Promenade" data-year="1875" data-location="National Gallery, Washington" data-img="images/la-promenade.jpg" data-desc="Intitulé à l'origine 'La Femme à l'ombrelle', ce tableau met en scène Camille et son fils Jean sur une colline herbeuse à Argenteuil. Le jeu de lumière entre le blanc de la robe, le vert des prairies et le bleu vibrant du ciel illustre la maîtrise suprême du plein air." data-id="col-2">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/la-promenade.jpg" alt="La Promenade"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LA PROMENADE</h3><span class="year-badge">1875</span></div><p class="card-location">National Gallery, Washington</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="La Gare de Saint Lazare" data-year="1877" data-location="Musée d'Orsay, Paris" data-img="images/la-gare-de-saint-lazare.jpg" data-desc="S'installant tout exprès dans le quartier, Monet obtient l'autorisation d'accéder aux quais pour peindre cette immense verrière parisienne. Il transcende la rudesse de l'ère industrielle en une symphonie vaporeuse de nuages de fumée et de lumière dorée." data-id="col-3">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/la-gare-de-saint-lazare.jpg" alt="La Gare de Saint Lazare"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LA GARE DE SAINT LAZARE</h3><span class="year-badge">1877</span></div><p class="card-location">Musée d'Orsay, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Les Coquelicots" data-year="1873" data-location="Musée d'Orsay, Paris" data-img="images/les-coquelicots.jpg" data-desc="Ce chef-d'œuvre champêtre, peint à Argenteuil, structure la toile en diagonales dynamiques. Les touches de rouge pur de part et d'autre évoquent la promenade insouciante de Camille et de leur petit garçon au milieu des fleurs sauvages." data-id="col-4">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/les-coquelicots.jpg" alt="Les Coquelicots"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LES COQUELICOTS</h3><span class="year-badge">1873</span></div><p class="card-location">Musée d'Orsay, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Le Pont Japonais" data-year="1899" data-location="Giverny" data-img="images/le-pont-japonais.jpg" data-desc="Inspiré par sa passion pour les estampes japonaises Ukiyo-e, Monet conçoit ce pont de bois enjambant son étang normand. Entouré de saules pleureurs et de nénuphars, ce lieu devient son observatoire privilégié pour la méditation artistique." data-id="col-5">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/le-pont-japonais.jpg" alt="Le Pont Japonais"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LE PONT JAPONAIS</h3><span class="year-badge">1899</span></div><p class="card-location">Giverny</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Terrasse à Sainte-Adresse" data-year="1867" data-location="Metropolitan Museum, New York" data-img="images/terrasse-a-sainte-adresse.jpg" data-desc="Peint lors d'un séjour familial sur la côte normande, ce tableau audacieux adopte une perspective en plongée inspirée des estampes japonaises. Les drapeaux tricolores claquent au vent face aux bateaux à vapeur de la Manche." data-id="col-6">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/terrasse-a-sainte-adresse.jpg" alt="Terrasse à Sainte-Adresse"></div>
+              <div class="card-body"><div class="card-title-row"><h3>TERRASSE À SAINTE-ADRESSE</h3><span class="year-badge">1867</span></div><p class="card-location">Metropolitan Museum, NY</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Les Rochers de Belle-Île" data-year="1886" data-location="Musée d'Orsay, Paris" data-img="images/les-rochers-de-belle-ile.jpg" data-desc="Séjournant sur la côte sauvage bretonne, Monet affronte les tempêtes et les éléments déchaînés. Sa palette s'intensifie pour retranscrire la brutalité minérale des falaises frappées par les rouleaux écumants de l'océan." data-id="col-7">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/les-rochers-de-belle-ile.jpg" alt="Les Rochers de Belle-Île"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LES ROCHERS DE BELLE-ÎLE</h3><span class="year-badge">1886</span></div><p class="card-location">Musée d'Orsay, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Le Parlement de Londres" data-year="1904" data-location="Musée d'Orsay, Paris" data-img="images/le-parlement-de-londres.JPG" data-desc="Fasciné par le brouillard londonien et la silhouette gothique du Parlement, Monet réalise une série de variations atmosphériques où la pierre massive se dissout entièrement dans une lueur crépusculaire irréelle." data-id="col-8">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/le-parlement-de-londres.JPG" alt="Le Parlement de Londres"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LE PARLEMENT DE LONDRES</h3><span class="year-badge">1904</span></div><p class="card-location">Musée d'Orsay, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="La Pie" data-year="1869" data-location="Musée d'Orsay, Paris" data-img="images/magpie.jpg" data-desc="Chef-d'œuvre de peinture hivernale, Monet relève le défi difficile de peindre la neige en évitant les tons sombres. Il utilise des teintes bleutées et mauves pour capturer les ombres lumineuses du soleil sur les congères." data-id="col-9">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/magpie.jpg" alt="La Pie"></div>
+              <div class="card-body"><div class="card-title-row"><h3>LA PIE</h3><span class="year-badge">1869</span></div><p class="card-location">Musée d'Orsay, Paris</p></div>
+            </article>
+
+            <article class="art-card masterpiece-card clickable-artwork" data-title="Matinée sur la Seine" data-year="1898" data-location="Collection privée" data-img="images/matinee-sur-la-seine.jpg" data-desc="Issue de ses paysages de rivières matinales, cette toile montre l'obsession de Monet pour l'aube, l'humidité de l'air et les reflets diaphanes des arbres se confondant dans le miroir liquide de la Seine." data-id="col-10">
+              <button class="fav-heart-btn">♥</button><div class="card-image-wrap"><img src="images/matinee-sur-la-seine.jpg" alt="Matinée sur la Seine"></div>
+              <div class="card-body"><div class="card-title-row"><h3>MATINÉE SUR LA SEINE</h3><span class="year-badge">1898</span></div><p class="card-location">Collection privée</p></div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="mobile-full-cta">
+          <button class="btn-outline-pill" id="showAllColMobile">Toute la collection ↗</button>
+        </div>
+
+        <div class="section-sub-meta desktop-only">
+          <span>Regarder. Ressentir. Redécouvrir.</span>
+          <span>Œuvres de Claude Monet · Domaine public · Reproductions : Wikimedia Commons</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2 : PARCOURIR LES ÉPOQUES ================= -->
+    <section class="section-block" id="epoques">
+      <div class="container">
+        <div class="section-header epochs-header">
+          <h2 class="section-title">PARCOURIR LES ÉPOQUES</h2>
+          
+          <div class="epoch-filters" role="tablist" aria-label="Filtrer par époque">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="le-havre">Le Havre</button>
+            <button class="filter-btn" data-filter="argenteuil">Argenteuil</button>
+            <button class="filter-btn" data-filter="giverny">Giverny</button>
+          </div>
+        </div>
+
+        <!-- Description contextuelle de la ville sélectionnée -->
+        <div class="city-info-banner" id="cityInfoBanner" style="display: none;">
+          <h3 id="cityBannerTitle">Époque sélectionnée</h3>
+          <p id="cityBannerDesc"></p>
+        </div>
+
+        <div class="cards-grid epochs-grid" id="cityTableauxGrid">
+          
+          <!-- 1. Le Havre : Carte Principale -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="le-havre" data-main="true"
+                   data-title="Terrasse à Sainte-Adresse" data-year="1867" data-location="Le Havre" data-img="images/terrasse-a-sainte-adresse.jpg"
+                   data-desc="Le Havre est le berceau maritime de Monet. C'est ici qu'il affine sa passion pour les marines, les estuaires de la Seine et le port animé où il peindra son célèbre 'Impression, soleil levant'."
+                   data-id="terrasse-1867">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/terrasse-a-sainte-adresse.jpg" alt="Terrasse à Sainte-Adresse"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>TERRASSE A SAINTE-ADRESSE</h3>
+                <span class="year-badge">1867</span>
+              </div>
+              <p class="card-desc">
+                Une scène dominée par une vive lumière estivale, montrant une terrasse surplombant la manche garnie de drapeaux et de personnages observant les voiliers.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Le Havre</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Le Havre : Tableau supplémentaire -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="le-havre" data-main="false"
+                   data-title="Impression, soleil levant" data-year="1872" data-location="Le Havre / Paris" data-img="images/impression-soleil-levant.jpg"
+                   data-desc="Peint depuis le port du Havre, ce chef-d'œuvre a donné son nom au mouvement impressionniste lors de sa première exposition en 1874."
+                   data-id="lehavre-2">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/impression-soleil-levant.jpg" alt="Impression, soleil levant"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>IMPRESSION, SOLEIL LEVANT</h3>
+                <span class="year-badge">1872</span>
+              </div>
+              <p class="card-desc">
+                Le port de commerce du Havre dans la brume matinale, avec le disque rouge flamboyant du soleil se reflétant sur l'eau.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Le Havre</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Argenteuil : Carte Principale -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="argenteuil" data-main="true"
+                   data-title="Les Coquelicots" data-year="1873" data-location="Argenteuil" data-img="images/les-coquelicots.jpg"
+                   data-desc="Argenteuil (1871-1878) représente l'âge d'or de l'impressionnisme. Installé dans une maison au bord de l'eau, Monet y capture la joie de vivre bourgeoise, les régates de voiliers et les champs de coquelicots incandescents."
+                   data-id="coquelicots-1873">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/les-coquelicots.jpg" alt="Les Coquelicots"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>LES COQUELICOTS</h3>
+                <span class="year-badge">1873</span>
+              </div>
+              <p class="card-desc">
+                Une promenade estivale champêtre à travers un champ parsemé de coquelicots rouges vifs, où figurent son épouse Camille et leur fils Jean.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Argenteuil</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Argenteuil : Tableau supplémentaire -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="argenteuil" data-main="false"
+                   data-title="Bateaux à Argenteuil" data-year="1875" data-location="Argenteuil" data-img="images/argentueil.jpg"
+                   data-desc="La Seine à Argenteuil était le spot favori de Monet pour peindre les voiliers au mouillage et les reflets colorés sur l'eau verdoyante."
+                   data-id="argenteuil-2">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/argentueil.jpg" alt="Bateaux à Argenteuil"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>BATEAUX À ARGENTEUIL</h3>
+                <span class="year-badge">1875</span>
+              </div>
+              <p class="card-desc">
+                Une étude lumineuse des voiliers rouges et blancs ancrés le long des berges calmes de la Seine.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Argenteuil</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Giverny : Carte Principale -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="giverny" data-main="true"
+                   data-title="Le Pont Japonais" data-year="1899" data-location="Giverny" data-img="images/le-pont-japonais.jpg"
+                   data-desc="Giverny est le sanctuaire ultime de Monet de 1883 jusqu'à sa mort en 1926. Il y façonne son jardin extraordinaire doté d'un étang de nymphéas et d'un pont japonais."
+                   data-id="pont-1899">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/le-pont-japonais.jpg" alt="Le Pont Japonais"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>LE PONT JAPONAIS</h3>
+                <span class="year-badge">1899</span>
+              </div>
+              <p class="card-desc">
+                Une vue verdoyante du bassin d’eau et d’inspiration asiatique où le pont en bois vert enjambe une eau calme recouverte de nymphéas.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Giverny</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Giverny : Tableau supplémentaire -->
+          <article class="art-card epoch-card clickable-artwork city-card-item" data-epoch="giverny" data-main="false"
+                   data-title="Le Jardin à Giverny" data-year="1900" data-location="Giverny" data-img="images/le-jardin.jpg"
+                   data-desc="Les parterres de fleurs exubérants de Giverny, où Monet cultiva les iris et les pavots avec une passion d'horticulteur."
+                   data-id="giverny-2">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap"><img src="images/le-jardin.jpg" alt="Le Jardin à Giverny"></div>
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3>LE JARDIN À GIVERNY</h3>
+                <span class="year-badge">1900</span>
+              </div>
+              <p class="card-desc">
+                Une explosion de teintes violettes et mauves à travers les sentiers fleuris sous les saules pleureurs.
+              </p>
+              <div class="card-footer-row">
+                <span class="card-place">Giverny</span>
+                <span class="card-action-link mobile-only">Voir les œuvres ↗</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3 : EXPLORER AVEC PRÉCISION (BIOGRAPHIE RICHE) ================= -->
+    <section class="section-block" id="histoire">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">EXPLORER AVEC PRECISION</h2>
+        </div>
+
+        <div class="cards-grid precision-grid">
+          
+          <article class="art-card precision-card theme-sage clickable-artwork"
+                   data-title="Vie de Claude Monet : L'Odyssée d'un Maître"
+                   data-year="1840 – 1926"
+                   data-location="De Paris à Giverny"
+                   data-img="images/monet.jpg"
+                   data-desc="Né à Paris le 14 novembre 1840, Claude Monet grandit au Havre où il commence par se faire un nom comme caricaturiste talentueux. Formé par Eugène Boudin qui l'initie à la peinture en plein air, il monte à Paris et fonde avec ses amis (Renoir, Pissarro, Degas) le groupe des Impressionnistes malgré les moqueries de l'académisme. Après des années de précarité financière et la perte douloureuse de sa première femme Camille, il s'installe définitivement à Giverny en 1883. C'est dans ce havre normand qu'il concevra ses célèbres séries (les Meules, les Cathédrales de Rouen, les Nymphéas) et qu'il continuera à peindre avec acharnement malgré une cataracte avancée, jusqu'à son décès le 5 décembre 1926."
+                   data-id="bio-monet">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap mobile-crop-monet">
+              <img src="images/monet.jpg" alt="Portrait de Claude Monet">
+            </div>
+            <div class="card-body">
+              <h3>VIE DE MONET</h3>
+              <p class="card-desc">
+                Suivez la chronologie complète de l’artiste, ses combats artistiques, ses drames et l’évolution intime de son regard.
+              </p>
+              <span class="card-action-link mobile-only">Parcourir la vie ↗</span>
+            </div>
+          </article>
+
+          <article class="art-card precision-card theme-teal clickable-artwork"
+                   data-title="Dans le sillage de Monet"
+                   data-year="Influence"
+                   data-location="Histoire de l'art"
+                   data-img="images/van-gogh.webp"
+                   data-desc="L'audace de Monet a ouvert la voie à l'art moderne, influençant profondément des maîtres comme Van Gogh, Cézanne et les peintres abstraits du XXe siècle par la liberté absolue de la touche et la dissolution de la forme."
+                   data-id="sillage-monet">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap">
+              <img src="images/van-gogh.webp" alt="Dans le sillage de Monet">
+            </div>
+            <div class="card-body">
+              <h3>DANS LE SILLAGE DE MONET</h3>
+              <p class="card-desc">
+                Découvrez comment un seul coup de pinceau a changé à jamais l’histoire de l’art mondial.
+              </p>
+              <span class="card-action-link mobile-only">Explorer ↗</span>
+            </div>
+          </article>
+
+          <article class="art-card precision-card theme-mint clickable-artwork" id="favoris"
+                   data-title="Carnet de favoris"
+                   data-year="Espace Personnel"
+                   data-location="Sauvegardes"
+                   data-img="images/la-maison-du-pecheur.jpg"
+                   data-desc="Votre collection personnelle d'œuvres sauvegardées. Retrouvez ici toutes vos inspirations, lieux favoris et détails marqués au cours de votre visite immersive."
+                   data-id="carnet-fav">
+            <button class="fav-heart-btn" aria-label="Favoris">♥</button>
+            <div class="card-image-wrap">
+              <img src="images/la-maison-du-pecheur.jpg" alt="Carnet de favoris">
+            </div>
+            <div class="card-body">
+              <h3>CARNET DE FAVORIS</h3>
+              <p class="card-desc">
+                Sauvegarder les œuvres, les lieux et les détails pour revenir plus tard en toute tranquillité.
+              </p>
+              <span class="card-action-link mobile-only">Voir mes favoris ↗</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FENÊTRE MODALE DÉTAILS ================= -->
+  <div class="modal-overlay" id="artworkModal">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-img-wrap">
+          <img id="modalImg" src="images/Nympheas.jpg" alt="Aperçu de l'œuvre sélectionnée">
+        </div>
+        <div class="modal-content">
+          <span class="modal-year" id="modalYear">Année</span>
+          <h2 class="modal-title" id="modalTitle">Titre de l'œuvre</h2>
+          <p class="modal-location" id="modalLocation">Lieu</p>
+          <p class="modal-description" id="modalDesc"></p>
+          <button class="modal-fav-btn" id="modalFavToggle">♥ Ajouter aux favoris</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-title">MONET DIGITAL</span>
+        <p class="footer-tagline">Une galerie immersive pour découvrir Monet, ses lieux et ses œuvres avec précision.</p>
+      </div>
+
+      <div class="footer-mobile-links">
+        <a href="#collection" class="reset-home-link-col">Collection</a>
+        <a href="#accueil" class="reset-home-link">Monet Digital 2026</a>
+        <a href="#accueil" class="reset-home-link">Mentions légales</a>
+      </div>
+
+      <p class="footer-credits">
+        Œuvres de Claude Monet - Domaine public - Reproductions : Wikimedia Commons
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript complets -->
+  <script>
+    // 1. Menu Mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.textContent = isOpen ? 'FERMER' : 'MENU';
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = 'MENU';
+      });
+    });
+
+    // 2. Gestion des Favoris & Sauvegarde de la structure d'origine de l'accueil
+    let favorites = JSON.parse(localStorage.getItem('monet_favorites')) || [];
+    const mainContentEl = document.getElementById('mainContent');
+    const originalHomeHtml = mainContentEl.innerHTML; // On sauvegarde l'accueil d'origine
+    let viewingFavoritesOnly = false;
+
+    function updateFavoritesUI() {
+      document.getElementById('favCountDesktop').textContent = favorites.length;
+      document.getElementById('favCountMobile').textContent = favorites.length;
+
+      document.querySelectorAll('.art-card').forEach(card => {
+        const id = card.getAttribute('data-id');
+        const heartBtn = card.querySelector('.fav-heart-btn');
+        if (favorites.includes(id)) {
+          card.classList.add('is-favorite');
+          if (heartBtn) heartBtn.classList.add('active');
+        } else {
+          card.classList.remove('is-favorite');
+          if (heartBtn) heartBtn.classList.remove('active');
+        }
+      });
+    }
+
+    function toggleFavorite(id) {
+      if (favorites.includes(id)) {
+        favorites = favorites.filter(favId => favId !== id);
+      } else {
+        favorites.push(id);
+      }
+      localStorage.setItem('monet_favorites', JSON.stringify(favorites));
+      updateFavoritesUI();
+      
+      if (viewingFavoritesOnly) {
+        showFavoritesPage();
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('fav-heart-btn')) {
+        e.stopPropagation();
+        const card = e.target.closest('.art-card');
+        const id = card.getAttribute('data-id');
+        toggleFavorite(id);
+      }
+    });
+
+    // Fonction pour afficher la page dédiée aux favoris purs
+    function showFavoritesPage() {
+      viewingFavoritesOnly = true;
+
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = originalHomeHtml;
+      const allCards = tempDiv.querySelectorAll('.art-card');
+
+      let favCardsHtml = '';
+      allCards.forEach(card => {
+        const id = card.getAttribute('data-id');
+        if (favorites.includes(id)) {
+          const btn = card.querySelector('.fav-heart-btn');
+          if (btn) btn.classList.add('active');
+          favCardsHtml += card.outerHTML;
+        }
+      });
+
+      if (favCardsHtml === '') {
+        favCardsHtml = '<p style="color:var(--text-white); font-size:1.1rem; grid-column: 1/-1; text-align:center; padding: 60px 0;">Aucun favori pour le moment. Retournez à l\'accueil et cliquez sur le cœur d\'une œuvre pour l\'ajouter ici !</p>';
+      }
+
+      mainContentEl.innerHTML = `
+        <section class="section-block" style="padding: 60px 0; min-height: 60vh;">
+          <div class="container">
+            <div class="section-header" style="margin-bottom: 32px;">
+              <h2 class="section-title">MES FAVORIS</h2>
+            </div>
+            <div class="cards-grid">
+              ${favCardsHtml}
+            </div>
+          </div>
+        </section>
+      `;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Fonction pour restaurer l'accueil à l'identique
+    function resetToHomeState() {
+      viewingFavoritesOnly = false;
+      mainContentEl.innerHTML = originalHomeHtml;
+      
+      attachHomeListeners();
+      updateFavoritesUI();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Écouteurs pour le bouton "Mes favoris"
+    document.getElementById('desktopFavoritesBtn').addEventListener('click', (e) => { e.preventDefault(); showFavoritesPage(); });
+    document.getElementById('mobileFavoritesBtn').addEventListener('click', (e) => { 
+      e.preventDefault(); 
+      showFavoritesPage(); 
+      mobileDrawer.classList.remove('open'); 
+      menuToggle.textContent = 'MENU'; 
+    });
+
+    // Écouteur Accueil
+    document.querySelectorAll('.reset-home-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        resetToHomeState();
+      });
+    });
+
+    // Action globale pour le lien "La collection" du header
+    function handleHeaderCollectionClick(e) {
+      e.preventDefault();
+      resetToHomeState();
+      setTimeout(() => {
+        const extCol = document.getElementById('extendedCollection');
+        const mainGrid = document.getElementById('mainMasterpiecesGrid');
+        if (extCol && mainGrid) {
+          mainGrid.style.display = 'none';
+          extCol.style.display = 'block';
+          extCol.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 50);
+    }
+
+    document.getElementById('headerCollectionLink').addEventListener('click', handleHeaderCollectionClick);
+    document.getElementById('headerCollectionLinkMobile').addEventListener('click', (e) => {
+      mobileDrawer.classList.remove('open');
+      handleHeaderCollectionClick(e);
+    });
+
+    // Autres liens du menu
+    document.querySelectorAll('.reset-home-link-hist').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        resetToHomeState();
+        setTimeout(() => {
+          document.getElementById('histoire').scrollIntoView({ behavior: 'smooth' });
+        }, 50);
+      });
+    });
+
+    // Fonction pour attacher les interactions de l'accueil
+    function attachHomeListeners() {
+      const extCol = document.getElementById('extendedCollection');
+      const mainGrid = document.getElementById('mainMasterpiecesGrid');
+      
+      const showColBtnD = document.getElementById('showAllColDesktop');
+      const showColBtnM = document.getElementById('showAllColMobile');
+      const closeColBtn = document.getElementById('closeExtendedCol');
+
+      if(showColBtnD && extCol && mainGrid) {
+        showColBtnD.addEventListener('click', () => {
+          mainGrid.style.display = 'none';
+          extCol.style.display = 'block';
+          extCol.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+      if(showColBtnM && extCol && mainGrid) {
+        showColBtnM.addEventListener('click', () => {
+          mainGrid.style.display = 'none';
+          extCol.style.display = 'block';
+          extCol.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+      if(closeColBtn && extCol && mainGrid) {
+        closeColBtn.addEventListener('click', () => {
+          extCol.style.display = 'none';
+          mainGrid.style.display = 'grid';
+          document.getElementById('collection').scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      // Filtres époques
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cityCards = document.querySelectorAll('.city-card-item');
+      const cityBanner = document.getElementById('cityInfoBanner');
+      const cityTitle = document.getElementById('cityBannerTitle');
+      const cityDesc = document.getElementById('cityBannerDesc');
+
+      const cityData = {
+        'le-havre': {
+          title: "Le Havre : L'appel de l'océan et de la lumière portuaire",
+          desc: "C'est dans cette cité normande que Monet passa sa jeunesse. Le port du Havre, avec ses vapeurs, ses grues et ses mouvements incessants de bateaux, lui inspira ses tout premiers paysages marins et la fameuse toile 'Impression, soleil levant'."
+        },
+        'argenteuil': {
+          title: "Argenteuil : L'âge d'or de l'impressionnisme de plein air",
+          desc: "Entre 1871 et 1878, Monet s'installe dans cette petite ville proche de Paris. Entouré de sa famille, il révolutionne la peinture en capturant la lumière changeante sur la Seine, les régates de voile et les coquelicots flamboyants."
+        },
+        'giverny': {
+          title: "Giverny : Le sanctuaire végétal et l'œuvre ultime",
+          desc: "À partir de 1883, Giverny devient le jardin secret et l'atelier grandeur nature de l'artiste. Il y façonne son célèbre bassin aux nymphéas et son pont japonais, qui nourriront toute la fin de sa vie de création pure."
+        }
+      };
+
+      cityCards.forEach(card => {
+        if (card.getAttribute('data-main') === 'true') {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const selected = btn.getAttribute('data-filter');
+          
+          if (selected === 'all') {
+            if(cityBanner) cityBanner.style.display = 'none';
+            cityCards.forEach(card => {
+              if (card.getAttribute('data-main') === 'true') {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          } else {
+            if (cityData[selected] && cityBanner) {
+              cityBanner.style.display = 'block';
+              cityTitle.textContent = cityData[selected].title;
+              cityDesc.textContent = cityData[selected].desc;
+            }
+            cityCards.forEach(card => {
+              if (card.getAttribute('data-epoch') === selected) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          }
+        });
+      });
+    }
+
+    // 3. Modale détails globale (Accueil & Favoris)
+    const modal = document.getElementById('artworkModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalYear = document.getElementById('modalYear');
+    const modalLocation = document.getElementById('modalLocation');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalFavToggle = document.getElementById('modalFavToggle');
+    let currentActiveId = null;
+
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.clickable-artwork');
+      if (card && !e.target.classList.contains('fav-heart-btn')) {
+        currentActiveId = card.getAttribute('data-id');
+        modalImg.src = card.getAttribute('data-img');
+        modalTitle.textContent = card.getAttribute('data-title');
+        modalYear.textContent = card.getAttribute('data-year');
+        modalLocation.textContent = card.getAttribute('data-location');
+        modalDesc.textContent = card.getAttribute('data-desc');
+
+        updateModalFavButton();
+        modal.classList.add('open');
+      }
+    });
+
+    function updateModalFavButton() {
+      if (favorites.includes(currentActiveId)) {
+        modalFavToggle.textContent = '♥ Retirer des favoris';
+        modalFavToggle.classList.add('active');
+      } else {
+        modalFavToggle.textContent = '♥ Ajouter aux favoris';
+        modalFavToggle.classList.remove('active');
+      }
+    }
+
+    modalFavToggle.addEventListener('click', () => {
+      if (currentActiveId) {
+        toggleFavorite(currentActiveId);
+        updateModalFavButton();
+      }
+    });
+
+    modalClose.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+
+    // Initialisation au chargement
+    attachHomeListeners();
+    updateFavoritesUI();
+  </script>
+</body>
+</html>
